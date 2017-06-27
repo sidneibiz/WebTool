@@ -1,0 +1,49 @@
+<div class="container">
+  <br/>
+  <div class="container col-md-8">
+    <div class="col-md-10 container center-block text-center">
+      <ul class="nav row">
+        <div class="col-md-2 container">
+          <li class="nav-item">
+            <button type="button " class="btn btn-outline-info" ui-sref="home.home">Login</button>
+          </li>
+        </div>
+        <div class="col-md-2 container">
+          <li class="nav-item col-md-2 ">
+            <button type="button " class="btn btn-outline-info ">About</button>
+          </li>
+        </div>
+        <div class="col-md-2 container">
+          <li class="nav-item col-md-2 ">
+            <button type="button " class="btn btn-outline-info ">Utilities</button>
+          </li>
+        </div>
+        <div class="col-md-2 container">
+          <li class="nav-item col-md-2 ">
+            <button type="button " class="btn btn-outline-info ">Contributors</button>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <hr class="hr col-md-10" />
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <form class="form-horizontal" ng-submit="$ctrl.login($ctrl.github)">
+          <img src="../app/images/github.svg">
+          <legend>Login</legend>
+          <div class="control-group form-group">
+            <input type="text" ng-model="$ctrl.github.username" class="form-control text-center" id="username" placeholder="Email/UserName Git">
+          </div>
+          <div class="control-group form-group">
+            <input type="password" ng-model="$ctrl.github.password" class="form-control text-center" id="password" placeholder="Password">
+          </div>
+          <button type="button" class="btn btn-warning waves-effect">Clean</button>
+          <button type="button" class="btn btn-success waves-effect">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <hr class="hr col-md-10" />
+</div>

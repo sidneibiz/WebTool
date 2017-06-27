@@ -9,6 +9,15 @@ export default function ($stateProvider, $urlRouterProvider) {
       url: '/',
       component: 'app'
     })
+    .state('home', {
+      url: '',
+      views: {
+        'home': {
+          url: '/home',
+          template: '<h2>HOME CARALHO</h2>'
+        }
+      }
+    })
     .state('login', {
       url: '/login',
       component: 'login'

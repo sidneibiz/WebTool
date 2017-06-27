@@ -40,7 +40,7 @@ let common = {
     },
     {
       test: /\.css$/,
-      loaders: [ 'style-loader', 'css-loader?importLoaders=1', 'postcss-loader' ]
+      loaders: ['style-loader', 'css-loader?importLoaders=1', 'postcss-loader']
     },
     {
       test: /\.json$/,
@@ -49,6 +49,13 @@ let common = {
     {
       test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
       loader: 'file'
+    },
+    {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      loaders: [
+        'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+        'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+      ]
     }]
   },
 
@@ -59,7 +66,7 @@ let common = {
     }),
 
     new webpack.DefinePlugin({
-      'process.env':{
+      'process.env': {
         'ENV_NAME': JSON.stringify(env)
       }
     }),
@@ -85,10 +92,10 @@ if (TARGET !== undefined && TARGET.startsWith('serve')) {
   module.exports = merge.smart(common, {
     module: {
       loaders: [
-      {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader?sourceMap&importLoaders=1', 'postcss-loader', 'sass-loader?sourceMap']
-      }]
+        {
+          test: /\.scss$/,
+          loaders: ['style-loader', 'css-loader?sourceMap&importLoaders=1', 'postcss-loader', 'sass-loader?sourceMap']
+        }]
     },
     devtool: 'source-map'
   });
@@ -123,13 +130,13 @@ if (TARGET !== undefined && TARGET.startsWith('build')) {
       new ExtractTextPlugin('[name].[hash].css'),
 
       new DocsGeneratorPlugin({
-        enable       : docEnable,
+        enable: docEnable,
         staticContent: './docs',
-        sources      : {
-          include : 'src/app/**/**/*.js',
+        sources: {
+          include: 'src/app/**/**/*.js',
           basePath: 'src/app'
         },
-        output       : 'dist-docs'
+        output: 'dist-docs'
       })
     ],
   });
@@ -155,7 +162,8 @@ if (TARGET !== undefined && (TARGET === 'test' || TARGET === 'test-watch')) {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       }
-    ]}
+      ]
+    }
   });
 }
 

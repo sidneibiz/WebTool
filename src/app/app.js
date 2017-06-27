@@ -23,9 +23,10 @@ import config from 'app.config';
 import appConfig from './app.config';
 import appRoute from './app.route';
 import appComponent from './app.component';
-import loginController from './login/login.controller';
-import previewGeneratorController from './generator/preview-generator.controller';
-import generatorController from './generator/generator.controller';
+import loginController from './pages/login/login.controller';
+import previewGeneratorController from './pages/generator/preview-generator.controller';
+import generatorController from './pages/generator/generator.controller';
+import homeController from './pages/home/home.controller';
 
 
 import { GeneratorService } from './services/generator.service';
@@ -42,14 +43,15 @@ export default angular.module('tree-view', [
   'treeGrid',
   'mgcrea.ngStrap'
 ])
-.config(appConfig)
-.config(appRoute)
-.constant('CONFIG', config)
-.constant('ENVIRONNEMENT', process.env.ENV_NAME)
-.component('app', appComponent)
-.component('login', loginController)
-.component('previewGenerator', previewGeneratorController)
-.component('generator', generatorController)
-.service('generatorService', GeneratorService)
-.service('authService', AuthService)
-.name;
+  .config(appConfig)
+  .config(appRoute)
+  .constant('CONFIG', config)
+  .constant('ENVIRONNEMENT', process.env.ENV_NAME)
+  .component('app', appComponent)
+  .component('login', loginController)
+  .component('previewGenerator', previewGeneratorController)
+  .component('generator', generatorController)
+  .component('home', homeController)
+  .service('generatorService', GeneratorService)
+  .service('authService', AuthService)
+  .name;
