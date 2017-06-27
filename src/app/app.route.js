@@ -29,6 +29,10 @@ export default function ($stateProvider, $urlRouterProvider) {
     .state('preview-generator', {
       url: '/preview-generator',
       component: 'previewGenerator'
+    })
+    .state('input-list', {
+      url: '/input',
+      component: 'inputList'
     });
 
   $urlRouterProvider.otherwise('/');

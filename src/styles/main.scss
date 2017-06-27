@@ -33,3 +33,39 @@
     width: 400px;
     margin: 0 auto;
   }
+
+  .list-group {
+    background-color: #FFF;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    left: 0px;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    padding: 2px;
+    top: 5px;
+    z-index: 5;
+
+    button {
+      margin: 2px;
+      border:  #FFF;
+    }
+    
+    .item:active {
+      margin: 2px;
+      border: transparent;
+      background-color:#bcd8e5;
+    }
+
+    .item:focus {
+      margin: 2px;
+      border: transparent;
+      background-color:#bcd8e5;
+    }
+
+    .create{
+      background-color:#bcd8e5 
+    }
+  }

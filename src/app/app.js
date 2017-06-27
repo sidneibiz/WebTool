@@ -18,17 +18,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.scss';
 import 'angular-bootstrap-grid-tree/src/treeGrid.css';
 
+// confs
 import config from 'app.config';
-
 import appConfig from './app.config';
 import appRoute from './app.route';
+
+// pages
 import appComponent from './app.component';
 import loginController from './pages/login/login.controller';
-import previewGeneratorController from './pages/generator/preview-generator.controller';
+import previewGeneratorController from './pages/preview-generator/preview-generator.controller';
 import generatorController from './pages/generator/generator.controller';
 import homeController from './pages/home/home.controller';
 
+// components
+import inputListController from './components/input-list/input-list.controller';
 
+// services
 import { GeneratorService } from './services/generator.service';
 import { AuthService } from './services/auth.service';
 
@@ -52,6 +57,7 @@ export default angular.module('tree-view', [
   .component('previewGenerator', previewGeneratorController)
   .component('generator', generatorController)
   .component('home', homeController)
+  .component('inputList', inputListController)
   .service('generatorService', GeneratorService)
   .service('authService', AuthService)
   .name;

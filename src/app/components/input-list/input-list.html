@@ -1,0 +1,12 @@
+<label for="{{$ctrl.id}}">{{$ctrl.label}}</label>
+<input id="{{$ctrl.id}}" type="{{$ctrl.type}}" ng-model="$ctrl.model" class="form-control" ng-change="$ctrl.change($ctrl.selected)"
+  autocomplete="off" ng-focus="$ctrl.focus = true" ng-blur="$ctrl.blur($ctrl.model)">
+<div class="container" ng-show="$ctrl.model.length >= 1 && $ctrl.model.length < 9 && $ctrl.focus">
+  <div class="list-group text-center">
+    <button type="button" class="list-group-item list-group-item-action item create" ng-click="$ctrl.click(item.valor)" ng-selected="item.valor == $ctrl.model">
+      Create New <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </button>
+    <button ng-repeat="item in $ctrl.values | filter:$ctrl.model" type="button" class="list-group-item list-group-item-action item"
+      ng-click="$ctrl.click(item.valor)" ng-selected="item.valor == $ctrl.model">{{item.valor}}</button>
+  </div>
+</div>
