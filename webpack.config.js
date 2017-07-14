@@ -65,6 +65,15 @@ let common = {
       inject: 'body'
     }),
 
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      Tether: 'Tether',
+      'window.jQuery': 'jquery',
+      'window.jquery': 'jquery',
+      "window.Tether": 'tether'
+    }),
+
     new webpack.DefinePlugin({
       'process.env': {
         'ENV_NAME': JSON.stringify(env)

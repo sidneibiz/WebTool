@@ -1,35 +1,44 @@
-<script type="text/ng-template" id="customPopupTemplate.html">
-	<div class="custom-popup-wrapper" ng-style="{top: position().top+'px', left: position().left+'px'}" style="display: block;"
-	 ng-show="isOpen() && !moveInProgress" aria-hidden="{{!isOpen()}}">
-		<p class="message">select location from drop down.</p>
-
-		<ul class="dropdown-menu" role="listbox">
-			<li class="uib-typeahead-match" ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }" ng-mouseenter="selectActive($index)"
-			 ng-click="selectMatch($index)" role="option" id="{{::match.id}}">
-				<div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
-			</li>
-		</ul>
-	</div>
-</script>
-
-
-<div class="jumbotron">
-	<div class="container">
-		<h1>Tasy Schematics Structure Tool</h1>
-		<p>Create the your function structure on GitHub.</p>
-		<div class="row">
-			<div class="col-md-4 ">
-				<form ng-submit="$ctrl.save($ctrl.config)">
-					<div class="form-group">
-						<input-list values="$ctrl.modules" label="Module name:" model="$ctrl.config.module" id="module"></input-list>
-						<input-list values="$ctrl.modules" label="Branch name:" model="$ctrl.config.branch" id="branch" type="text"></input-list>
-						<input-list values="$ctrl.modules" label="Function name:" model="$ctrl.config.functionName" id="functionName" type="text"></input-list>
-						<input-list values="$ctrl.modules" label="Function code:" model="$ctrl.config.functionCode" id="functionCode" type="number"></input-list>
-						<input-list values="$ctrl.modules" label="Schematics function code:" model="$ctrl.config.schematicsCode" id="schematicsFunctionCode" type="number"></input-list>
-						<input-list values="$ctrl.modules" label="First component code:" model="$ctrl.config.firstComponent" id="componentCode" type="number"></input-list>
-					</div>
-					<button type="submit" class="btn btn-success">Create Structure</button>
-				</form>
+<div class="container">
+	<div class="row">
+		<nav class="navbar navbar-toggleable-md fixed-top">
+			<div class="container container-navbar">
+				<div class="navbar-translate">
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"
+					 aria-expanded="false" aria-label="Toggle navigation">
+   	      	<span class="navbar-toggler-bar bar1"></span>
+	        	<span class="navbar-toggler-bar bar2"></span>
+	        	<span class="navbar-toggler-bar bar3"></span>
+ 	    		</button>
+					<a class="navbar-brand" href="#pablo">WebTool</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navigation">
+					<ul class="navbar-nav">
+						<li class="nav-item active"><a class="nav-link" href="#pablo">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#pablo">Configuration</a></li>
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse reverse">
+					<ul class="navbar-nav">
+						<li class="nav-item nav-link" style="color: white">User</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<form class="form-horizontal" ng-submit="$ctrl.login($ctrl.github)">
+						<object data="./src/app/images/github.svg" type="image/svg+xml"></object>
+						<img src="./public/juan.png" />
+						<legend>Tasy Schematics Structure Tool</legend>
+						<div class="control-group form-group">
+							<input-list values="$ctrl.modules" label="Module name:" model="$ctrl.config.module" id="module" labelnew="Module"></input-list>
+							<input-list values="$ctrl.modules" label="Schematics function code:" model="$ctrl.config.schematicsCode" id="schematicsFunctionCode"
+							 type="number"></input-list>
+						</div>
+						<button type="button" class="btn btn-success waves-effect">Preview Generator</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -3,9 +3,14 @@
   autocomplete="off" ng-focus="$ctrl.focus = true" ng-blur="$ctrl.blur($ctrl.model)">
 <div class="container" ng-show="$ctrl.model.length >= 1 && $ctrl.model.length < 9 && $ctrl.focus">
   <div class="list-group text-center">
-    <button type="button" class="list-group-item list-group-item-action item create" ng-click="$ctrl.click(item.valor)" ng-selected="item.valor == $ctrl.model">
-      Create New <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-    </button>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <span class="badge badge-info btn btn-info" ata-toggle="modal" data-target="#myModal">New {{$ctrl.labelnew}}</span>
+        </div>
+      </div>
+    </div>
     <button ng-repeat="item in $ctrl.values | filter:$ctrl.model" type="button" class="list-group-item list-group-item-action item"
       ng-click="$ctrl.click(item.valor)" ng-selected="item.valor == $ctrl.model">{{item.valor}}</button>
   </div>

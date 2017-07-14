@@ -26,9 +26,6 @@ class InputListController {
     this.focus = false;
   }
 
-  // blur(value) {
-  //   this.click(value);
-  // }
 }
 
 export default {
@@ -37,6 +34,8 @@ export default {
   bindings: {
     values: '=',
     label: '@',
+    labelnew: '@',
+    labelout: '@',
     model: '=',
     id: "@",
     type: "@"

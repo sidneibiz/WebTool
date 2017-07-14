@@ -1,5 +1,8 @@
 /* global process */
 import angular from 'angular';
+import 'jquery';
+import 'Tether';
+import 'bootstrap/dist/js/bootstrap';
 import ngAnimate from 'angular-animate';
 import ngAria from 'angular-aria';
 import ngTouch from 'angular-touch';
@@ -13,9 +16,11 @@ import 'tree-model/dist/TreeModel';
 import 'angular-strap/dist/angular-strap.min.js';
 import 'angular-strap/dist/angular-strap.compat.min.js';
 import 'angular-strap/dist/angular-strap.tpl.min.js';
+import '../styles/now-kit/js/now-ui-kit';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/main.scss';
+import '../styles/now-kit/css/now-ui-kit.css';
 import 'angular-bootstrap-grid-tree/src/treeGrid.css';
 
 // confs

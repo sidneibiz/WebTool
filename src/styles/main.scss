@@ -13,6 +13,24 @@
     color: #868686;
   }
 
+  .btn .btn-sucess {
+    background-color: #A5D424 !important;
+  }
+
+  .navbar {
+    background: linear-gradient(145deg,#081026 0,#003478 60%,#0066a1 100%);
+    background-image: linear-gradient(145deg, rgb(8, 16, 38) 0px, rgb(0, 52, 120) 60%, rgb(0, 102, 161) 100%);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+  }
+
   .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
     position: static;
     float: none;
@@ -42,9 +60,9 @@
     flex-direction: column;
     margin-bottom: 0;
     left: 0px;
-    box-shadow: 1px 1px 3px black;
-    border-radius: 5px;
-    padding: 2px;
+    box-shadow: 0px 0px 5px rgba(8, 8, 8, 0.22);
+    border-radius: 10px;
+    padding: 3px;
     top: 5px;
     z-index: 5;
 
@@ -68,4 +86,14 @@
     .create{
       background-color:#bcd8e5 
     }
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .container-navbar {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    width: 100%;
   }

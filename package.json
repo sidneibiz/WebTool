@@ -24,9 +24,11 @@
     "angular-ui-router": "^1.0.0-beta.3",
     "bootstrap": "^4.0.0-alpha.6",
     "html-loader": "^0.4.5",
+    "jquery": "^3.2.1",
     "ngstorage": "^0.3.11",
     "node-gyp": "^3.6.2",
     "restangular": "^1.5.2",
+    "tether": "^1.4.0",
     "tree-model": "^1.0.6",
     "url-loader": "^0.5.9"
   },
